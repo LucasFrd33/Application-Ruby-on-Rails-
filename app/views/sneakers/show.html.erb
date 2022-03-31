@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Released:</strong>
+  <%= @sneaker.released %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @sneaker.image %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @sneaker.logo %>
+</p>
+
+<p>
+  <strong>Tilte:</strong>
+  <%= @sneaker.tilte %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @sneaker.release_date %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sneaker.price %>
+</p>
+
+<%= link_to 'Edit', edit_sneaker_path(@sneaker) %> |
+<%= link_to 'Back', sneakers_path %>

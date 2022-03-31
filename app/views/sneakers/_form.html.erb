@@ -1,0 +1,47 @@
+<%= form_with(model: sneaker) do |form| %>
+  <% if sneaker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sneaker.errors.count, "error") %> prohibited this sneaker from being saved:</h2>
+
+      <ul>
+        <% sneaker.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :released %>
+    <%= form.check_box :released %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_area :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :logo %>
+    <%= form.text_area :logo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tilte %>
+    <%= form.text_field :tilte %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_date %>
+    <%= form.date_select :release_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
