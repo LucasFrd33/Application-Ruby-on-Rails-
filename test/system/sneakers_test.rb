@@ -19,7 +19,7 @@ class SneakersTest < ApplicationSystemTestCase
     fill_in "Price", with: @sneaker.price
     fill_in "Release date", with: @sneaker.release_date
     check "Released" if @sneaker.released
-    fill_in "Tilte", with: @sneaker.tilte
+    fill_in "title", with: @sneaker.title
     click_on "Create Sneaker"
 
     assert_text "Sneaker was successfully created"
@@ -35,7 +35,7 @@ class SneakersTest < ApplicationSystemTestCase
     fill_in "Price", with: @sneaker.price
     fill_in "Release date", with: @sneaker.release_date
     check "Released" if @sneaker.released
-    fill_in "Tilte", with: @sneaker.tilte
+    fill_in "title", with: @sneaker.title
     click_on "Update Sneaker"
 
     assert_text "Sneaker was successfully updated"

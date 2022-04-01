@@ -4,7 +4,7 @@ class CreateSneakers < ActiveRecord::Migration[6.1]
       t.boolean :released
       t.text :image
       t.text :logo
-      t.string :tilte
+      t.string :title
       t.date :release_date
       t.float :price
 
