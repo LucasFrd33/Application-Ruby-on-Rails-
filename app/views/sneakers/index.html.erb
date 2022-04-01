@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sneakers calendar</h1>
+<h1 class="text-center">Sneakers calendar</h1>
 
-
-<div class="row row-cols-1 row-cols-md-3 g-4 border">
+<div class="container border">
+<div class="row row-cols-1 row-cols-md-3 g-4">
   <% @sneakers.each do |sneaker| %>
     <div class="col">
       <div class="card">
@@ -25,11 +25,16 @@
     </div>
   <% end %>
 </div>
+</div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4 border">
+<h4 class="text-center">DROP PASSÉS</h4>
+
+<div class="container border borderDrop">
+<div class="row row-cols-1 row-cols-md-3 g-4">
   <% @sneakersdrop.each do |sneaker| %>
     <div class="col">
-      <div class="card bg-danger">
+      <div class="card ">
+      <div class="background"></div>
         <img src="<%= sneaker.image %>" class="card-img-top p-2" alt="...">
         <img src="<%= sneaker.logo %>" width="50" class="m-2" alt="...">
         <div class="card-body">
@@ -47,6 +52,7 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>
 
 <%= link_to 'New Sneaker', new_sneaker_path %>
