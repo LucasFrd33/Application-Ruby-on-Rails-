@@ -4,7 +4,7 @@ one:
   released: false
   image: MyText
   logo: MyText
-  title: MyString
+  tilte: MyString
   release_date: 2022-03-31
   price: 1.5
 
@@ -12,6 +12,6 @@ two:
   released: false
   image: MyText
   logo: MyText
-  title: MyString
+  tilte: MyString
   release_date: 2022-03-31
   price: 1.5

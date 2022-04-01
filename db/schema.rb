@@ -19,16 +19,9 @@ ActiveRecord::Schema.define(version: 2022_03_31_121119) do
     t.boolean "released"
     t.text "image"
     t.text "logo"
-    t.string "title"
+    t.string "tilte"
     t.date "release_date"
     t.float "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "stories", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
