@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
-
+gem 'bootstrap', '~> 5.1.3'
 
 gem 'rails', '~> 6.1.5'
 gem 'pg', '~> 1.1'
