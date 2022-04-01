@@ -3,28 +3,31 @@
 <h1 class="text-center">Sneakers calendar</h1>
 
 <div class="container border">
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <% @sneakers.each do |sneaker| %>
-    <div class="col">
-      <div class="card">
-        <img src="<%= sneaker.image %>" class="card-img-top p-2" alt="...">
-        <img src="<%= sneaker.logo %>" width="50" class="m-2" alt="...">
-        <div class="card-body">
-          <h5 class="card-tilte"><%= sneaker.tilte %></h5>
-          <div class="d-flex justify-content-between">
-              <p><%= sneaker.release_date %></p>
-              <p><%= sneaker.price %><span>€</span></p>
+  <div class="row d-flex flex-nowrap cardSlide">
+    <% @sneakers.each do |sneaker| %>
+
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <img src="<%= sneaker.image %>" class="card-img-top p-2" alt="...">
+          <img src="<%= sneaker.logo %>" width="50" class="m-2" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title"><%= sneaker.tilte %></h5>
+            <div class="d-flex justify-content-between">
+                <p><%= sneaker.release_date %></p>
+                <p><%= sneaker.price %><span>€</span></p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-success" > <a><%= link_to 'Edit', edit_sneaker_path(sneaker) %></a> </button>
+              <button class="btn btn-primary" > <a><%= link_to 'Show', sneaker %></a> </button>
+              <button class="btn btn-danger" > <a><%= link_to 'Destroy', sneaker, method: :delete, data: { confirm: 'Are you sure?' } %></a> </button>
+            </div>
           </div>
-          <div class="d-flex justify-content-between">
-            <button class="btn btn-success" > <a><%= link_to 'Edit', edit_sneaker_path(sneaker) %></a> </button>
-            <button class="btn btn-primary" > <a><%= link_to 'Show', sneaker %></a> </button>
-            <button class="btn btn-danger" > <a><%= link_to 'Destroy', sneaker, method: :delete, data: { confirm: 'Are you sure?' } %></a> </button>
-          </div>
-       </div>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+
+    <% end %>
+  </div>
 </div>
 
 <h4 class="text-center">DROP PASSÉS</h4>
