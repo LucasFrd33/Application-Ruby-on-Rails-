@@ -5,7 +5,6 @@ ruby '3.0.3'
 gem 'bootstrap', '~> 5.1.3'
 gem 'simple_form'
 
-
 gem 'rails', '~> 6.1.5'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'

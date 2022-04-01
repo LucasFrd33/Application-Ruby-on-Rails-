@@ -1,9 +1,15 @@
 class SneakersController < ApplicationController
   before_action :set_sneaker, only: %i[ show edit update destroy ]
 
+  def latest
+    @sneakers = Sneaker.where(released:true)
+    @sneakersdrop = Sneaker.where(released:false)
+  end
+
   # GET /sneakers or /sneakers.json
   def index
-    @sneakers = Sneaker.all
+    @sneakers = Sneaker.where(released:false)
+    @sneakersdrop = Sneaker.where(released:true)
   end
 
   # GET /sneakers/1 or /sneakers/1.json
