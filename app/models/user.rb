@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :sneakers
+
+  has_many :sneakers, foreign_key: 'user_id', dependent: :destroy
 end
