@@ -28,7 +28,7 @@ class SneakersController < ApplicationController
   # POST /sneakers or /sneakers.json
   def create
     @sneaker = Sneaker.new(sneaker_params)
-    @sneaker.user = current_user.sneakers.new(params[:sneaker])
+    @sneaker.user = current_user
     respond_to do |format|
       if @sneaker.save
         format.html { redirect_to sneaker_url(@sneaker), notice: "Sneaker was successfully created." }
