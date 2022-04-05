@@ -24,4 +24,11 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :password)
   end
 
+  def new
+    @post = current_user.posts.build
+  end
+
+  def create
+    @post = current_user.posts.new(post_params)
+  end
 end
