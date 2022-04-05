@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="text-center">Sneakers calendar</h1>
-<% if current_user %>
+<% if user_signed_in? %>
   <h1 class="text-center">Salut <%=@name%> </h1>
 <% end %>
 
@@ -20,7 +20,7 @@
                 <p><%= sneaker.release_date %></p>
                 <p><%= sneaker.price %><span>€</span></p>
             </div>
-            <% if current_user %>
+            <% if user_signed_in? %>
               <div class="d-flex justify-content-between">
                 <button class="btn btn-success" > <a><%= link_to 'Edit', edit_sneaker_path(sneaker) %></a> </button>
                 <button class="btn btn-primary" > <a><%= link_to 'Show', sneaker %></a> </button>
@@ -51,7 +51,7 @@
               <p><%= sneaker.release_date %></p>
               <p><%= sneaker.price %><span>€</span></p>
           </div>
-          <% if current_user %>
+          <% if user_signed_in? %>
             <div class="d-flex justify-content-between">
               <button class="btn btn-success" > <a><%= link_to 'Edit', edit_sneaker_path(sneaker) %></a> </button>
               <button class="btn btn-primary" > <a><%= link_to 'Show', sneaker %></a> </button>
@@ -64,6 +64,6 @@
   <% end %>
 </div>
 </div>
- <% if current_user %>
+ <% if user_signed_in? %>
   <%= link_to 'New Sneaker', new_sneaker_path %>
 <% end %>

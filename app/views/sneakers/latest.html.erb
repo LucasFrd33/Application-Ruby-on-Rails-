@@ -15,7 +15,7 @@
               <p><%= sneaker.release_date %></p>
               <p><%= sneaker.price %><span>€</span></p>
           </div>
-          <% if current_user %>
+          <% if user_signed_in? %>
             <div class="d-flex justify-content-between">
               <button class="btn btn-success" > <a><%= link_to 'Edit', edit_sneaker_path(sneaker) %></a> </button>
               <button class="btn btn-primary" > <a><%= link_to 'Show', sneaker %></a> </button>
